@@ -1,0 +1,32 @@
+.v-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Text-btn{
+    margin-top: 17%;
+    width: 41%;
+    margin-left: 4%;
+}
+.Text-wrap{
+display: flex;
+flex-flow: column;
+}
+.Txt-head{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.Txt-para{
+    word-wrap: break-word;
+}
+
+.btn-wrap{
+    
+}
+
+.play-btn{
+    border: 1px solid;
+}
+.info-btn{
+    border: 1px solid;
+}
