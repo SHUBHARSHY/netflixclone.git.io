@@ -1,0 +1,47 @@
+.second{
+    /* position: absolute; */
+    /* margin-top: 52.7rem; */
+    
+}
+.list-box{
+    background-color: #141414;
+    width: 100%;
+  
+}
+.inr-listbox{
+    position: relative;
+    z-index: 20;
+    margin-top: -13rem;
+    width: 90%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+   margin-left: 5%;
+}
+
+
+@media screen and (max-width: 1200px){
+    .inr-listbox{
+      
+        margin-top: -6rem
+       
+    }
+
+}
+
+@media screen and (max-width: 720px){
+    .inr-listbox{
+      
+        margin-top: 45rem;
+       
+    }
+
+}
+@media screen and (max-width: 480px){
+    .inr-listbox{
+      
+        margin-top: 40rem;
+       
+    }
+
+}

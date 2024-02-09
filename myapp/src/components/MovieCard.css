@@ -1,0 +1,10 @@
+.moviecard{
+    width: 9rem;
+}
+
+@media screen and (max-width: 480px){
+    .moviecard{
+        width: 7rem;
+    }
+
+}

@@ -1,14 +1,18 @@
 import React,{useEffect} from 'react'
-import { LOGO } from './utils/constant'
+import { LOGO, SUPOORTED_LANGUAGES } from './utils/constant'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addUser, removeUser } from './utils/userSlice';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from './utils/Firebase';
+import { toggleGptSearchView } from './utils/gptSlice';
+import { changeLanguage } from './utils/configSlice';
+import "./Header.css"
 const Header = () => {
 const dispatch = useDispatch()
 const navigate = useNavigate()
 const user = useSelector((store) => store.user);
+const showGptSearch =useSelector((store)=>store.gpt.showGptSearch)
 
 const handleSignOut = () => {
   signOut(auth)
@@ -35,25 +39,59 @@ const handleSignOut = () => {
      // unsubscribe when my component will unmount
      return ()=>unsubscribe()
    },[])
+
+
+const handleGptSearchClick=()=>{
+  //toggle gpt search
+
+  dispatch(toggleGptSearchView( ))
+}
+
+const handleLanguageChange =(e)=>{
+   dispatch(changeLanguage(e.target.value))
+}
+
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-    <img  className="w-[7rem]" src={LOGO} alt='logo'/>
-    {user && <div className="flex p-2  ">
-        <img
-          className="w-8 h-8 rounded-[4px] mt-1"
-          src={user.photoURL}alt="usericon"
-        />
-        <img
-          className="w-8 h-8 rounded-[4px] mt-1"
-          src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
-          alt="usericon"
-        />
-        <button className="p-2 text-white font-medium" onClick={handleSignOut}>
-          Sign Out
-        </button>
-      </div>}
+    <div  className='upr-head'
+    >
+    <div className="header">
+    <img  
+    className="logo"
+    src={LOGO} alt='logo'/>
+
+    {user && <div 
+      className="right-head">
+
+    {showGptSearch && <select 
+      className="language"
+      onChange={handleLanguageChange}>
+      {SUPOORTED_LANGUAGES.map(lang=> <option value={lang.identifier}>{lang.name}</option>)}
+      </select>}
+
+
+   
+    <button onClick={handleGptSearchClick} 
+    className="gpt-page"
+    > {showGptSearch ?"Homepage":<div className='Search'><i class="fa-solid fa-magnifying-glass"></i> <p>Search</p></div>}</button>
+       
+    
+    <div className='right-right-head'>
+    
+    <img
+    className="w-8 h-8 rounded-[4px] mt-1"
+    src={user.photoURL}alt="usericon"
+    />
+    
+    <button 
+    className='sign'
+    onClick={handleSignOut}>
+    Sign Out
+    </button>
     </div>
-  )
+    </div>}
+    </div>
+    </div>
+    )
 }
 
 export default Header
