@@ -52,7 +52,7 @@
     width: 80%;
     border-radius: 4px;
 }
-.sign-in{
+.sign-out{
     font-size: xx-large;
     margin-bottom: 5px;
     font-weight: 400;
@@ -119,7 +119,7 @@ height: 100vh;
         height: 2rem;
         padding: 0;
     }
-    .sign-in{
+    .sign-out{
         font-size: x-large;
     }
     .show-pass{

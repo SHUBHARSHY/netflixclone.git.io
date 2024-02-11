@@ -110,7 +110,7 @@ signInWithEmailAndPassword(auth, email, password)
  className="form"
 >
  <h1 
- className="sign-in"
+ className="sign-out"
 //  className="font-bold text-3xl py-4"
  >
    {" "}
