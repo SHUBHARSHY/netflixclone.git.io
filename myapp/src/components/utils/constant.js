@@ -42,4 +42,5 @@ export const SUPOORTED_LANGUAGES = [
   { identifier: "sp", name: "Spanish" },
 ];
 
-export const GPT_kEY = "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"
+// export const GPT_kEY = "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"
+export const GPT_kEY = "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"

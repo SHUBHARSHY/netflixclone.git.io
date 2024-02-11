@@ -1,5 +1,7 @@
 
-
+.title{
+    width: 100%;
+}
 .v-Container{
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +87,7 @@ flex-flow: column;
         height: 100vh;
 
 
-        margin-top: 135%;
+        margin-top: 130%;
     display: flex;
     justify-content: center;
     margin-left: 0px;

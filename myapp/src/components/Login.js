@@ -13,11 +13,16 @@ const Login = () => {
 
     const [isSignInForm, setIsSignInForm] = useState(true);
     const [errMessage, setErrMessage] = useState(null);
+    const [showPassword, setShowPassword] = useState(false);
     // const navigate = useNavigate()
     const Email = useRef(null);
     const Password = useRef(null);
     const Name = useRef(null);
     const dispatch = useDispatch()
+
+  const handleCheckboxChange = () => {
+    setShowPassword(!showPassword);
+  };
     
     const toggleSingInForm = ()=>{
         setIsSignInForm(!isSignInForm)
@@ -91,17 +96,23 @@ signInWithEmailAndPassword(auth, email, password)
   return (
     <div >
    <Header/>
-   <div className="absolute bg-color"> 
-   <img
+   <div className='login'>
+  
+   <div className="absolute bg-color login-back"> 
+   <img className='wallpaper'
    src={BG_URL}
    alt="photo"
    />
    </div>
  <form
  onSubmit={(e) => e.preventDefault()}
- className="w-3/12 absolute p-12 bg-black bg-opacity-75 my-36 mx-auto right-0 left-0 text-white rounded-[4px]"
+//  className="w-3/12 absolute p-12 bg-black bg-opacity-75 my-36 mx-auto right-0 left-0 text-white rounded-[4px]"
+ className="form"
 >
- <h1 className="font-bold text-3xl py-4">
+ <h1 
+ className="sign-in"
+//  className="font-bold text-3xl py-4"
+ >
    {" "}
    {isSignInForm ? "Sign In" : "Sign Up"}
  </h1>
@@ -110,31 +121,48 @@ signInWithEmailAndPassword(auth, email, password)
      ref={Name}
      type="text"
      placeholder="Full Name"
-     className="p-4 my-4 w-full bg-[#333] rounded-[4px]"
+     className="input"
+    //  className="p-4 my-4 w-full bg-[#333] rounded-[4px]"
    />
  )}
  <input
    ref={Email}
    type="text"
    placeholder="Email Address"
-   className="p-4 my-4 w-full bg-[#333] rounded-[4px]"
+   className="input"
+  //  className="p-4 my-4 w-full bg-[#333] rounded-[4px]"
  />
  <input
    ref={Password}
-   type="password"
+   type={showPassword ? 'text' : 'password'}
    placeholder="Password"
-   className="p-4 my-4 w-full bg-[#333] rounded-[4px] "
+   className="input"
+  //  className="p-4 my-4 w-full bg-[#333] rounded-[4px] "
  />
+
+
  <button
-   className="p-4 my-6 bg-[#e50914] w-full rounded-[4px] cursor-pointer"
+  //  className="p-4 my-6 bg-[#e50914] w-full rounded-[4px] cursor-pointer"
+   className="login-btn"
    onClick={handleButtonClick}
  >
    {isSignInForm ? "Sign In" : "Sign Up"}
  </button>
- <p className="text-[#e50914] font-medium text-lg py-2">
+ <p 
+ className="error-msg"
+ >
   { /*{!isSignInForm ? errMessage : null}*/}
   {errMessage}
  </p>
+<div className='show-pass' >
+<input
+type="checkbox"
+id="showPassword"
+checked={showPassword}
+onChange={handleCheckboxChange}
+/>
+<p>show password</p>
+</div>
  <div className="py-4 cursor-pointer" onClick={toggleSingInForm}>
    {isSignInForm ? (
      <p>
@@ -150,6 +178,7 @@ signInWithEmailAndPassword(auth, email, password)
    )}{" "}
  </div>
 </form>
+</div>
     </div>
   )
 }

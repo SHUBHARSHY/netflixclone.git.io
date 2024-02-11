@@ -70,12 +70,15 @@ const MovieList = ({title,movies}) => {
 
   return (
     <>
+   
+
     <h1 style={{color:"white",margin:"5px",fontSize:"large"}}>{title}</h1>
     <Slider {...settings}>
     {movies.map((item) => (
       <MovieCard key={item.id} posterPath={item}/>
       ))}
       </Slider>
+     
       </>
   );
 };

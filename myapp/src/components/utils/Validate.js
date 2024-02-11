@@ -7,7 +7,7 @@ export const checkValidData =(email,password,name)=>{
     
     if(!isEmailValid)return "Email Id is not valid"
      
-    if(!isPassvalid) return "Password is not valid"
+    if(!isPassvalid) return "Password is not valid. \nShould be more than 8 and include atleast a number,special character, a small and a capital letter "
     
     
     return null

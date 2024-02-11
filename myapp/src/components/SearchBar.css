@@ -32,7 +32,7 @@
     justify-content: space-evenly;
     align-items: center;
 }
-.input{
+.input-gpt{
     width: 80%;
     height: 3rem;
     text-align: center;
@@ -48,7 +48,7 @@
 }
 
 @media screen and (max-width: 720px){
-.input{
+.input-gpt{
     width: 70%;
     height: 2.5rem;
     text-align: center;
@@ -73,7 +73,7 @@
         margin-top: 25%;
 
     }
-.input {
+.input-gpt {
     width: 70%;
     height: 2rem;
     text-align: center;

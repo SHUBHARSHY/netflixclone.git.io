@@ -1,7 +1,7 @@
 
-.upr-head{
+header{
 
-    z-index: 9999;
+   
     /* background-color: black; */
     background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
     position: fixed;
@@ -9,7 +9,19 @@
     left: 0;
     height: 70px;
     width: 100%;
+    transition: 0.6s;
+  z-index: 10000;
 }
+
+/* header.sticky{
+    transition: 0.6s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    background-image: linear-gradient(180deg,rgba(1,1,1,.7) 100%,transparent);
+   
+} */
 .header{
    
     flex-wrap: wrap;
@@ -44,6 +56,8 @@
 .right-right-head{
     display: flex;
     justify-content: space-evenly;
+    gap: 5px;
+    margin-right: 20px;
    
     
 }
@@ -55,9 +69,14 @@
     gap: 10px;
     
 }
-.sign{
+.sign-in{
     font-size: 1.1rem;
     color: white;
+    background-color: #e50913;
+    border-radius: 4px;
+    height: 2rem;
+    width: 5rem;
+    opacity: 0.8;
 }
 .right-head{
     display: flex;
@@ -92,8 +111,8 @@
     margin-top: 20px;
 }
     .logo{
-        width: 90px;
-    height: 35px;
+        width: 100px;
+    height: 40px;
     padding-left: 0px;
     /* margin-top: 20px; */
     margin-left: 10px;
@@ -109,11 +128,17 @@
     .gpt-page{
        font-size: 15px;
     }
-    .sign{
+    .sign-in{
      font-size: 15px;
+     background-color: #e50913;
+     border-radius: 4px;
+     height: 2.2rem;
+     width: 4rem;
+     opacity: 0.8;
     }
     .right-right-head{
         width: 38%;
+        margin-right: 10px;
         
     }
 } 

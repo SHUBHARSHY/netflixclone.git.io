@@ -7,8 +7,9 @@ import appStore from './components/utils/appStore';
 function App() {
   return (
    <Provider store={appStore}>
-
-   <Body />
+<div style={{background:"black",height:"100vh",width:"100%"}}>
+<Body />
+</div>
 
    </Provider>
   );

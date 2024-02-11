@@ -1,7 +1,7 @@
 import MovieCard from './MovieCard'
-import './MovieNumList.css'
+import './MovieGptList.css'
 
-const MovieNumList = ({ title, movies }) => {
+const MovieGptList = ({ title, movies }) => {
 
     return (
         <div className=''>
@@ -12,7 +12,6 @@ const MovieNumList = ({ title, movies }) => {
                 <div className='flex abcd'>
                     {movies?.map((item, index) => (
                         <>
-                            <h1 className='abcdefghi'>{index+1}</h1>
                             <MovieCard key={item.id} posterPath={item} />
                         </>
                     ))}
@@ -22,4 +21,4 @@ const MovieNumList = ({ title, movies }) => {
     );
 };
 
-export default MovieNumList;
+export default MovieGptList;

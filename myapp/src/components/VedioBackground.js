@@ -72,7 +72,7 @@ const styles = getStyles();
 
 const centeredImageStyle = {
   position: 'absolute',
-  top: '50%',
+  top: '45%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '90%', // Adjust the size of the centered image as needed
@@ -100,7 +100,7 @@ const centeredImageStyle = {
       ) : (
         <div className="">
       <iframe
-className="w-screen aspect-video"
+className="w-[100%] aspect-video"
         src={"https://www.youtube.com/embed/"+trailerVedio?.key+"?&autoplay=1&mute=1&loop=2&controls=0&cc_load_policy=1"}
         title="YouTube video player"
        

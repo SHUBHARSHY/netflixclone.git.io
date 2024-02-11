@@ -50,7 +50,7 @@ const searchMovieTmdb =  async(movies)=>{
     onSubmit={(e)=>e.preventDefault()}>
     <input
     //  className='p-4 m-4 col-span-9'
-    className='input'
+    className='input-gpt'
      placeholder={lang[langKey].placeholder} ref={searchText}/>
     <button 
     // className='col-span-3 m-4 py-2 px-4 bg-red-700 text-white rounded-lg' 

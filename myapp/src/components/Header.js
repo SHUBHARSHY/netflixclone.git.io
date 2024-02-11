@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import { LOGO, SUPOORTED_LANGUAGES } from './utils/constant'
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { addUser, removeUser } from './utils/userSlice';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from './utils/Firebase';
@@ -13,10 +13,12 @@ const dispatch = useDispatch()
 const navigate = useNavigate()
 const user = useSelector((store) => store.user);
 const showGptSearch =useSelector((store)=>store.gpt.showGptSearch)
-
+const {id} = useParams()
 const handleSignOut = () => {
   signOut(auth)
 };
+
+
 
   useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -25,7 +27,8 @@ const handleSignOut = () => {
          // https://firebase.google.com/docs/reference/js/auth.user
          const {uid, email, displayName,photoURL} = user;
          dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}))
-        navigate("/browse")
+          
+         navigate("/browse") 
          // ...
        } else {
          // User is signed out
@@ -51,8 +54,15 @@ const handleLanguageChange =(e)=>{
    dispatch(changeLanguage(e.target.value))
 }
 
+
+// window.addEventListener('scroll', function() {
+//   let header = document.querySelector('header');
+//   console.log(header)
+//   header.classList.toggle('sticky', window.scrollY > 0);
+// });
+
   return (
-    <div  className='upr-head'
+    <header  
     >
     <div className="header">
     <img  
@@ -83,14 +93,14 @@ const handleLanguageChange =(e)=>{
     />
     
     <button 
-    className='sign'
+    className='sign-in'
     onClick={handleSignOut}>
     Sign Out
     </button>
     </div>
     </div>}
     </div>
-    </div>
+    </header>
     )
 }
 

@@ -30,14 +30,15 @@ const Body = () => {
             
         },
         {
-            path:"/MovieDetails/:id",
+            path:"/browse/MovieDetails/:id",
             element:<MovieDetailCard/>
             
         }
     ])
   return (
-    <div>
+    <div style={{background:"#1414140"}}>
 <RouterProvider router={appRouter}/>
+
     </div>
   )
 }

@@ -8,18 +8,20 @@ const MovieCard = ({posterPath}) => {
  const navigate = useNavigate()
 const showVedio =()=>{
   //  navigate("/tmdb/"+id)
-  navigate("/MovieDetails/"+id)
+  navigate("/browse/MovieDetails/"+id)
   
 }
 
-
+// const text= "hello world"
+// let abc = new SpeechSynthesisUtterance(text)
+// window.speechSynthesis.speak(abc)
   if (!poster_path) return null
   return (
     <div
     //  className='w-[9rem] pr-4'
-    className="moviecard"
+    className="zooming-card"
     >
-    <img alt='card' src={IMG_CDN_URL + poster_path} onClick={showVedio}/>
+    <img alt='zooming-image' className='zooming-image' src={IMG_CDN_URL + poster_path} onClick={showVedio}/>
     </div>
   )
 }
