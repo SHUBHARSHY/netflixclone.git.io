@@ -31,12 +31,12 @@
     
 }
 
-.input{
+.myinput{
    background: #333;
    color: white;
    border-radius: 4px;
    width: 70%;
-   height: 2rem;
+   height: 3rem;
    text-align: center;
    font-size: smaller;
    padding: 15px;
@@ -49,7 +49,7 @@
     background-color: #e50914;
     margin: 15px;
     height: 3rem;
-    width: 80%;
+    width: 70%;
     border-radius: 4px;
 }
 .sign-out{
@@ -61,12 +61,12 @@
 .show-pass{
 display:flex;
 gap:5px;
-width:80%
+width:70%
 }
 
 .error-msg{
     color: #e50914;
-    width: 80%;
+    width: 70%;
 }
 @media screen and (max-width: 1210px){
 .login-back{
@@ -97,6 +97,9 @@ height: 100vh;
     height: 2.5rem;
     padding: 0;
 }
+.myinput{
+    height: 2.5rem;
+}
 .show-pass{
         
     width:70%
@@ -118,6 +121,9 @@ height: 100vh;
         width: 70%;
         height: 2rem;
         padding: 0;
+    }
+    .myinput{
+        height: 2rem;
     }
     .sign-out{
         font-size: x-large;

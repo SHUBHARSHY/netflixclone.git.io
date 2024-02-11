@@ -121,7 +121,7 @@ signInWithEmailAndPassword(auth, email, password)
      ref={Name}
      type="text"
      placeholder="Full Name"
-     className="input"
+     className="myinput"
     //  className="p-4 my-4 w-full bg-[#333] rounded-[4px]"
    />
  )}
@@ -129,14 +129,14 @@ signInWithEmailAndPassword(auth, email, password)
    ref={Email}
    type="text"
    placeholder="Email Address"
-   className="input"
+   className="myinput"
   //  className="p-4 my-4 w-full bg-[#333] rounded-[4px]"
  />
  <input
    ref={Password}
    type={showPassword ? 'text' : 'password'}
    placeholder="Password"
-   className="input"
+   className="myinput"
   //  className="p-4 my-4 w-full bg-[#333] rounded-[4px] "
  />
 
