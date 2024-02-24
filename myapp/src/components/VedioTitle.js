@@ -15,7 +15,7 @@ const VedioTitle = ({title,overview,MovieID}) => {
     <div className='Text-btn'>
     <div className='Text-wrap'>
     <h1 className='Txt-head'>{title}</h1>
-    <p className='Txt-para'>{overview}</p>
+    <p className='Txt-para'>{overview.split(" ").slice(0, 20).join(" ")+"..." || overview}</p>
     </div>
     
     <div className='action flex gap-3 mt-4 btn-wrap'>

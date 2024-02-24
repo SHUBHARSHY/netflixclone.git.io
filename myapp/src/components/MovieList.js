@@ -18,7 +18,7 @@ const MovieList = ({title,movies}) => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1500,
+        breakpoint: 3000,
         settings: {
           slidesToShow: 8,
           slidesToScroll:1 ,

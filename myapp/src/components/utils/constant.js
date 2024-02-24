@@ -43,4 +43,4 @@ export const SUPOORTED_LANGUAGES = [
 ];
 
 // export const GPT_kEY = "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"
-export const GPT_kEY = "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"
+export const GPT_kEY = "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"
