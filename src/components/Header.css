@@ -1,0 +1,144 @@
+
+header{
+
+   
+    /* background-color: black; */
+    background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    transition: 0.6s;
+  z-index: 10000;
+}
+
+/* header.sticky{
+    transition: 0.6s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    background-image: linear-gradient(180deg,rgba(1,1,1,.7) 100%,transparent);
+   
+} */
+.header{
+   
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    font-weight: 700;
+    display: flex;
+   
+}
+.logo{
+    width: 130px;
+    height: 50px;
+    margin-left: 25px;
+    margin-top: 10px;
+
+}
+.gpt-page{
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0.5px solid white;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.right-right-head{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    margin-right: 20px;
+   
+    
+}
+
+.Search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.sign-in{
+    font-size: 1.1rem;
+    color: white;
+    background-color: #e50913;
+    border-radius: 4px;
+    height: 2rem;
+    width: 5rem;
+    opacity: 0.8;
+}
+.right-head{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
+.language{
+    color: white;
+    background: #e50913;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+    height: 2rem;
+}
+
+@media screen and (max-width: 720px){
+
+    .logo{
+        width: 100px;
+        height: 50px;
+        /* margin-top: 12px; */
+        margin-left: 15px;
+    }
+    .right-head {
+        width: 67%;
+    }
+
+} 
+@media screen and (max-width: 480px){
+.header{
+    margin-top: 20px;
+}
+    .logo{
+        width: 100px;
+    height: 40px;
+    padding-left: 0px;
+    /* margin-top: 20px; */
+    margin-left: 10px;
+
+    
+    }
+    .right-head {
+        width: 71%;
+    }
+    .language{
+        font-size: 15px;
+    }
+    .gpt-page{
+       font-size: 15px;
+    }
+    .sign-in{
+     font-size: 15px;
+     background-color: #e50913;
+     border-radius: 4px;
+     height: 2.2rem;
+     width: 4rem;
+     opacity: 0.8;
+    }
+    .right-right-head{
+        width: 38%;
+        margin-right: 10px;
+        
+    }
+} 

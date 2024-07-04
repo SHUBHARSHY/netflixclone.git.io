@@ -1,0 +1,40 @@
+.moviecard{
+    width: 9rem;
+}
+
+.imger:hover{
+    /* transition: all 0.9s ease 0s; */
+}
+
+.zooming-card {
+   
+   width: 9rem;
+    overflow: hidden; /* Hide overflowing content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .zooming-image{
+   
+   border-radius: 5px;
+    background-size: cover; /* Cover the entire div with the background image */
+    transition: transform 0.9s ease; /* Add a transition effect for smooth scaling */
+  }
+  
+  .zooming-card:hover .zooming-image {
+    transform: scale(1.2); /* Zoom out the image when hovering over the card */
+  }
+
+
+
+@media screen and (max-width: 480px){
+    .zooming-card{
+     
+        width: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

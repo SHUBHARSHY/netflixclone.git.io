@@ -1,0 +1,97 @@
+
+.heading{
+    background-color: #4b5563b3;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 700;
+    width: 70%;
+}
+.para{
+    background-color: #4b5563b3;
+    color: white; 
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    width: 70%;
+    margin-bottom: 20px;
+
+}
+.search-bar{
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    flex-flow:column
+}
+.search-form{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input-gpt{
+    width: 80%;
+    height: 3rem;
+    text-align: center;
+}
+.search-btn{
+    color: white;
+    background: #e50913;
+    width: 5rem;
+    height: 3rem;
+    font-size: larger;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 720px){
+.input-gpt{
+    width: 70%;
+    height: 2.5rem;
+    text-align: center;
+}
+
+.search-btn {
+    width: 4rem;
+    height: 2.5rem;
+    font-size: large;
+    border-radius: 5px;
+    margin: 8px;
+}
+.search-bar{
+    margin-top: 25%;
+
+}
+}
+
+
+@media screen and (max-width: 480px){
+    .search-bar{
+        margin-top: 25%;
+
+    }
+.input-gpt {
+    width: 70%;
+    height: 2rem;
+    text-align: center;
+    font-size: smaller;
+}
+
+.search-btn {
+    width: 4rem;
+    height: 2rem;
+    margin: 5px;
+    font-size: small;
+}
+
+.heading{
+   
+    font-size: larger; 
+}
+.para{
+    font-size: small;
+}
+}
